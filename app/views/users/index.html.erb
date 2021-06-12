@@ -14,15 +14,15 @@
             </tr>
           </thead>
           <tbody>
+            <% @users.each do |u| %>
             <tr>
-              <% @users.each do |user| %>
               <td>
-                <%= user.profile_image %>
+                <%= u.profile_image %>
               </td>
-              <td><%= user.name %></td>
-              <td><%= link_to 'show', user_path(user.id) %></td>
-              <% end %>
+              <td><%= u.name %></td>
+              <td><%= link_to 'show', user_path(u.id) %></td>
             </tr>
+            <% end %>
           </tbody>
         </table>
       </div>
